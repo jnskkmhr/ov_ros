@@ -1,0 +1,6 @@
+# joint_name: ['left_front_wheel_joint', 'right_front_wheel_joint', 'left_front_wheel_joint', 'left_rear_wheel_joint']
+joint_name: ['Leg1_Wheel1', 'Leg1_Wheel2', 'Leg2_Wheel1', 'Leg2_Wheel2', 'Leg3_Wheel1', 'Leg3_Wheel2']
+joint_topic_name: 'drive_command'
+twist_topic_name: 'cmd_vel'
+base: 0.453
+radius: 0.09

@@ -1,0 +1,10 @@
+__pycache__
+
+ros1/devel
+ros1/build
+ros1/logs
+ros1/.catkin_tools
+
+ros2/install
+ros2/build
+ros2/log

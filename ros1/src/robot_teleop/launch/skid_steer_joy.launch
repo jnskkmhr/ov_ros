@@ -1,0 +1,8 @@
+<launch>
+    <param name="~autorepeat_rate" type="double" value="10.0"/>
+    <node pkg="joy" type="joy_node" name="joy_node" />
+    <node pkg="robot_teleop" type="joy_to_twist.py" name="joy_to_twist"/>
+        <rosparam file="$(find robot_teleop)/config/joy_skid_steer.yaml" />
+    <node pkg="robot_teleop" type="skid_steer_controller.py" name="skid_steer_controller"/>
+        <rosparam file="$(find robot_teleop)/config/skid_steer_controller.yaml" />
+</launch>
