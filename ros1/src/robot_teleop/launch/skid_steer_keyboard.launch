@@ -1,6 +1,5 @@
 <launch>
-    <param name="~autorepeat_rate" type="double" value="10.0"/>
-    <param name="_speed" type="double" value="0.5"/>
+    <param name="_speed" type="double" value="2.0"/>
     <param name="_turn" type="double" value="1.0"/>
     <rosparam file="$(find robot_teleop)/config/skid_steer_controller.yaml" />
     <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="joy_to_twist"/>
