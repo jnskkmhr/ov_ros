@@ -1,7 +1,8 @@
 # joint_name: ['left_front_wheel_joint', 'right_front_wheel_joint', 'left_front_wheel_joint', 'left_rear_wheel_joint'] #ex1
 # joint_name: ['Leg1_Wheel1', 'Leg1_Wheel2', 'Leg2_Wheel1', 'Leg2_Wheel2', 'Leg3_Wheel1', 'Leg3_Wheel2'] # 3w1h
 # joint_name: ['leg1_wheel1', 'leg1_wheel2', 'leg2_wheel1', 'leg2_wheel2', 'leg3_wheel1', 'leg3_wheel2', 'leg4_wheel1', 'leg4_wheel2'] # container robot
-joint_name: ['wheel1_joint', 'wheel2_joint'] # 1w1h (wheel1_link, wheel2_link)
+# joint_name: ['wheel1_joint', 'wheel2_joint'] # 1w1h (wheel1_link, wheel2_link)
+joint_name: ["wheel1_joint", "wheel2_joint", "arm2_wheel1_joint", "arm2_wheel2_joint"] #dragon
 joint_topic_name: 'drive_command'
 twist_topic_name: 'cmd_vel'
 base: 0.453

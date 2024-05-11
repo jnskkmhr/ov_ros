@@ -1,8 +1,8 @@
 drive_joint_name: ['right_front_wheel_joint', 'right_rear_wheel_joint', 'left_front_wheel_joint', 'left_rear_wheel_joint']
 steer_joint_name: ['right_front_steering_joint', 'left_front_steering_joint']
-drive_joint_topic_name: 'steering_command'
-steer_joint_topic_name: 'drive_command'
+drive_joint_topic_name: 'drive_command'
+steer_joint_topic_name: 'steering_command'
 ackermann_topic_name: 'ackermann_cmd'
 length: 0.673
 width: 0.453
-radius: 0.09
+radius: 0.15

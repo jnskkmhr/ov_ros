@@ -38,8 +38,8 @@ class AckermannController:
         self.gamma = self.get_param('gamma')
 
         self.sub = rospy.Subscriber(self.get_param('ackermann_cmd'), AckermannDriveStamped, self.callback)
-        self.steer_pub = rospy.Publisher(self.get_param('drive_joint_topic_name'), JointState, queue_size=1)
-        self.drive_pub = rospy.Publisher(self.get_param('steering_joint_topic_name'), JointState, queue_size=1)
+        self.steer_pub = rospy.Publisher(self.get_param('steering_joint_topic_name'), JointState, queue_size=1)
+        self.drive_pub = rospy.Publisher(self.get_param('drive_joint_topic_name'), JointState, queue_size=1)
 
         self.steer_joint_state = JointState()
         self.drive_joint_state = JointState()
@@ -94,8 +94,10 @@ class AckermannController:
         Update the joint position (steering angle) based on ackermann steering.
         Args:
             steer_ack (float): command_steering/ackermann_ratio"""
-        steer_left = math.atan(self.width*math.tan(steer_ack)/(self.width + 0.5*self.length*math.tan(steer_ack)))
-        steer_right = math.atan(self.width*math.tan(steer_ack)/(self.width - 0.5*self.length*math.tan(steer_ack)))
+        # steer_left = math.atan(self.width*math.tan(steer_ack)/(self.width + 0.5*self.length*math.tan(steer_ack)))
+        # steer_right = math.atan(self.width*math.tan(steer_ack)/(self.width - 0.5*self.length*math.tan(steer_ack)))
+        steer_left = steer_ack * (180/math.pi)
+        steer_right = steer_ack * (180/math.pi)
         self.steer_joint_state.position = [steer_left, steer_right]
         self.steer_joint_state.header.stamp = rospy.Time.now()
 
