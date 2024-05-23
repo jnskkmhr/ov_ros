@@ -58,7 +58,7 @@ class SkidSteerController:
         """
         msg (Twist): Twist message
         """
-        scale = 0.1
+        scale = 0.3
         linear_velocity = msg.linear.x * scale
         angular_velocity = msg.angular.z * scale
         self.twist_to_joint_cmd(linear_velocity, angular_velocity)
